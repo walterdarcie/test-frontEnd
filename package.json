@@ -12,7 +12,14 @@
   "author": "UOL HOST",
   "devDependencies": {
     "connect": "^3.4.1",
+    "gulp": "^3.9.1",
+    "gulp-install": "^0.6.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-uglify": "^1.5.4",
+    "jshint": "^2.9.2",
     "open": "0.0.5",
     "serve-static": "^1.11.1"
-  }
+  },
+  "main": "app.js",
+  "license": "ISC"
 }
