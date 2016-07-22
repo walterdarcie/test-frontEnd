@@ -56,12 +56,23 @@ gulp.task('templates', function() {
     .pipe(minify())
     .pipe(gulp.dest('app/templates'));
 });
+// Move main Bower files
+gulp.task('bower', function() {
+  gulp.src([
+      'bower_components/angular/angular.min.js',
+      'bower_components/angularUtils-pagination/dirPagination.js',
+      'bower_components/bootstrap/dist/css/bootstrap.min.css',
+      'bower_components/bootstrap/dist/css/bootstrap.min.css',
+    ])
+    .pipe(gulp.dest('app/vendor'));
+});
 // Watcher
 gulp.task('watch',function() {
   gulp.watch(paths.styles, ['styles']);
   gulp.watch(paths.scripts, ['scripts']);
   gulp.watch(paths.images, ['images']);
   gulp.watch(paths.data, ['data']);
+  gulp.watch(paths.templates, ['templates']);
 });
 // Default task: run agulpll at once
-gulp.task('default', ['styles','scripts', 'images', 'data', 'templates', 'watch']);
+gulp.task('default', ['styles','scripts', 'images', 'data', 'templates', 'bower', 'watch']);

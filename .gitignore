@@ -29,4 +29,4 @@ Temporary Items
 npm-debug.log
 /node_modules
 /bin
-app/bower_components
+/bower_components
