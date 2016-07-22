@@ -1,0 +1,9 @@
+// =============================
+// MIXINS
+// =============================
+
+=linearGradient($color-stops...)
+  background: nth(nth($color-stops, 1), 1)
+  background: -moz-linear-gradient(top, $color-stops)
+  background: -webkit-linear-gradient(top, $color-stops)
+  background: linear-gradient(to bottom, $color-stops)
